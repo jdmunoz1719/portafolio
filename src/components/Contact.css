@@ -1,0 +1,76 @@
+.contact-card {
+  max-width: 620px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.contact-desc {
+  color: rgba(255,255,255,0.55);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.contact-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.contact-btn.primary {
+  background: #6366f1;
+  color: #fff;
+}
+
+.contact-btn.primary:hover {
+  background: #5254cc;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(99,102,241,0.35);
+}
+
+.contact-btn.secondary {
+  background: transparent;
+  color: rgba(255,255,255,0.75);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.contact-btn.secondary:hover {
+  border-color: rgba(255,255,255,0.35);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.contact-info {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-info span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.35);
+  font-size: 0.82rem;
+}
+
+.contact-info svg { color: #6366f1; flex-shrink: 0; }

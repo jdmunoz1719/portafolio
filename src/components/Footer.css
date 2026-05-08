@@ -1,0 +1,32 @@
+.footer {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 2rem;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.6);
+}
+
+.footer-logo .dot { color: #6366f1; }
+
+.footer-text, .footer-copy {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.3);
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .footer-inner { justify-content: center; text-align: center; }
+}
