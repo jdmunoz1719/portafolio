@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLang } from "../context/LangContext";
+import { useLang } from "../../context/LangContext";
 import "./Projects.css";
 
 export default function Projects() {
@@ -57,7 +57,12 @@ function ProjectCard({ project, index }) {
       <div className="project-info">
         <div className="project-header">
           <div>
-            <h3 className="project-name">{project.name}</h3>
+            <div className="project-name-row">
+              <h3 className="project-name">{project.name}</h3>
+              {project.badge && (
+                <span className="project-badge">{project.badge}</span>
+              )}
+            </div>
             <span className="project-company">{project.company}</span>
           </div>
           <span className="project-period">{project.period}</span>

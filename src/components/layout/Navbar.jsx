@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLang } from "../context/LangContext";
+import { useLang } from "../../context/LangContext";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -12,6 +12,11 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [menuOpen]);
 
   const links = [
     { href: "#about", label: t.nav.about },
@@ -47,7 +52,11 @@ export default function Navbar() {
           <button className="lang-toggle" onClick={toggle} aria-label="Toggle language">
             {lang === "es" ? "EN" : "ES"}
           </button>
-          <button className="burger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
+          <button
+            className={`burger ${menuOpen ? "open" : ""}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Menu"
+          >
             <span /><span /><span />
           </button>
         </div>

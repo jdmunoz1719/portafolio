@@ -6,7 +6,7 @@ import {
   SiJest, SiGithubcopilot, SiOpenai, SiVite,
   SiCss, SiSequelize as _seq,
 } from "react-icons/si";
-import { useLang } from "../context/LangContext";
+import { useLang } from "../../context/LangContext";
 import "./Skills.css";
 
 function AzureIcon() {

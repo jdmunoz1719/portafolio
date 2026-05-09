@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLang } from "../context/LangContext";
+import { useLang } from "../../context/LangContext";
 import "./Hero.css";
 
 export default function Hero() {

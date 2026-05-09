@@ -1,4 +1,4 @@
-import { useLang } from "../context/LangContext";
+import { useLang } from "../../context/LangContext";
 import "./Contact.css";
 
 export default function Contact() {

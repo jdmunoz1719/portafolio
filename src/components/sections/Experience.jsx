@@ -1,4 +1,4 @@
-import { useLang } from "../context/LangContext";
+import { useLang } from "../../context/LangContext";
 import "./Experience.css";
 
 export default function Experience() {

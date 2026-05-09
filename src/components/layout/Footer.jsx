@@ -1,4 +1,4 @@
-import { useLang } from "../context/LangContext";
+import { useLang } from "../../context/LangContext";
 import "./Footer.css";
 
 export default function Footer() {
