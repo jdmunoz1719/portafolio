@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import { LangProvider } from "./context/LangContext";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <Contact />
         <Footer />
       </div>
+      <Analytics />
     </LangProvider>
   );
 }
