@@ -6,9 +6,9 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-inner">
-        <span className="footer-logo">DM<span className="dot">.</span></span>
+        <span className="footer-logo">DG<span className="dot">.</span></span>
         <p className="footer-text">{t.footer.built}</p>
-        <p className="footer-copy">© {new Date().getFullYear()} Jesus David Muñoz</p>
+        <p className="footer-copy">© {new Date().getFullYear()} David Gallego</p>
       </div>
     </footer>
   );

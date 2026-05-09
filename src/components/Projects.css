@@ -1,0 +1,159 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.35s;
+  animation: fadeUp 0.6s ease both;
+}
+
+.project-card:hover {
+  border-color: rgba(99,102,241,0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Preview area */
+.project-preview {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #0d0d1a;
+}
+
+.project-screenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-screenshot {
+  transform: scale(1.04);
+}
+
+/* Placeholder when no screenshot */
+.project-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at 30% 30%, var(--accent, #6366f1) 0%, #0a0a14 70%);
+  opacity: 0.85;
+}
+
+.placeholder-letter {
+  font-size: 5rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.15);
+  user-select: none;
+}
+
+/* Overlay with link */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,10,20,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-link-btn {
+  background: #6366f1;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.project-link-btn:hover {
+  background: #4f52d9;
+  transform: scale(1.05);
+}
+
+/* Info area */
+.project-info {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.project-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 3px;
+}
+
+.project-company {
+  font-size: 0.8rem;
+  color: #6366f1;
+  font-weight: 500;
+}
+
+.project-period {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.project-desc {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.65;
+  margin: 0 0 1rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.project-tag {
+  background: rgba(99,102,241,0.08);
+  border: 1px solid rgba(99,102,241,0.18);
+  color: rgba(99,102,241,0.9);
+  padding: 0.2rem 0.65rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-info {
+    padding: 1rem;
+  }
+}

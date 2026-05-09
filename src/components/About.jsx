@@ -16,7 +16,7 @@ export default function About() {
         <div className="about-grid">
           <div className="about-avatar">
             <div className="avatar-ring">
-              <div className="avatar-initials">DM</div>
+              <div className="avatar-initials">DG</div>
             </div>
             <div className="avatar-badge">
               <span className="badge-dot" />

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLang } from "../context/LangContext";
 import "./Navbar.css";
 
@@ -16,6 +16,7 @@ export default function Navbar() {
   const links = [
     { href: "#about", label: t.nav.about },
     { href: "#experience", label: t.nav.experience },
+    { href: "#projects", label: t.nav.projects },
     { href: "#skills", label: t.nav.skills },
     { href: "#contact", label: t.nav.contact },
   ];
@@ -29,7 +30,7 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-inner">
         <span className="navbar-logo" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          DM<span className="dot">.</span>
+          DG<span className="dot">.</span>
         </span>
 
         <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
