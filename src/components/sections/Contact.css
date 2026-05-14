@@ -58,6 +58,19 @@
   transform: translateY(-2px);
 }
 
+.contact-btn.whatsapp {
+  background: rgba(37,211,102,0.1);
+  border: 1px solid rgba(37,211,102,0.3);
+  color: #25d366;
+}
+
+.contact-btn.whatsapp:hover {
+  background: rgba(37,211,102,0.2);
+  border-color: rgba(37,211,102,0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37,211,102,0.2);
+}
+
 .contact-info {
   display: flex;
   gap: 1.5rem;

@@ -68,11 +68,6 @@ function ProjectCard({ project, index }) {
           <span className="project-period">{project.period}</span>
         </div>
         <p className="project-desc">{project.description}</p>
-        <div className="project-tags">
-          {project.tags.map((tag, j) => (
-            <span key={j} className="project-tag">{tag}</span>
-          ))}
-        </div>
       </div>
     </div>
   );
